@@ -33,3 +33,22 @@ $text='  nchc_openwebui_'.$i.':
 	  
 echo $text."\n\n";
 }
+
+echo '  nchc_nginx:
+    container_name: nchc_nginx
+    image: nginx
+    ports:
+      - 443:443
+    volumes:
+      - ./nginx/biobank_ssl:/ssl
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf 
+      - ./nginx/htpasswd.txt:/etc/nginx/.htpasswd  
+      - ./website/assets:/usr/share/nginx/html/assets
+      - ./website/index_ds_ip.html:/usr/share/nginx/html/index.html
+    restart: always
+    networks:
+        - nchc       
+    extra_hosts:
+      - host.docker.internal:host-gateway 
+	  
+';
