@@ -1,0 +1,579 @@
+version: "3.9"
+
+name: nchcsystem
+
+networks:
+  nchc:
+    external: false
+    
+services:
+  nchc_openwebui_5001:
+    container_name: nchc_openwebui_5001
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5001:5001    
+    volumes:
+      - ./storage/openwebui_data_5001:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5001
+
+  nchc_openwebui_5002:
+    container_name: nchc_openwebui_5002
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5002:5002    
+    volumes:
+      - ./storage/openwebui_data_5002:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5002
+
+  nchc_openwebui_5003:
+    container_name: nchc_openwebui_5003
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5003:5003    
+    volumes:
+      - ./storage/openwebui_data_5003:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5003
+
+  nchc_openwebui_5004:
+    container_name: nchc_openwebui_5004
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5004:5004    
+    volumes:
+      - ./storage/openwebui_data_5004:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5004
+
+  nchc_openwebui_5005:
+    container_name: nchc_openwebui_5005
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5005:5005    
+    volumes:
+      - ./storage/openwebui_data_5005:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5005
+
+  nchc_openwebui_5006:
+    container_name: nchc_openwebui_5006
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5006:5006    
+    volumes:
+      - ./storage/openwebui_data_5006:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5006
+
+  nchc_openwebui_5007:
+    container_name: nchc_openwebui_5007
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5007:5007    
+    volumes:
+      - ./storage/openwebui_data_5007:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5007
+
+  nchc_openwebui_5008:
+    container_name: nchc_openwebui_5008
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5008:5008    
+    volumes:
+      - ./storage/openwebui_data_5008:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5008
+
+  nchc_openwebui_5009:
+    container_name: nchc_openwebui_5009
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5009:5009    
+    volumes:
+      - ./storage/openwebui_data_5009:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5009
+
+  nchc_openwebui_5010:
+    container_name: nchc_openwebui_5010
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5010:5010    
+    volumes:
+      - ./storage/openwebui_data_5010:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5010
+
+  nchc_openwebui_5011:
+    container_name: nchc_openwebui_5011
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5011:5011    
+    volumes:
+      - ./storage/openwebui_data_5011:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5011
+
+  nchc_openwebui_5012:
+    container_name: nchc_openwebui_5012
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5012:5012    
+    volumes:
+      - ./storage/openwebui_data_5012:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5012
+
+  nchc_openwebui_5013:
+    container_name: nchc_openwebui_5013
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5013:5013    
+    volumes:
+      - ./storage/openwebui_data_5013:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5013
+
+  nchc_openwebui_5014:
+    container_name: nchc_openwebui_5014
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5014:5014    
+    volumes:
+      - ./storage/openwebui_data_5014:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5014
+
+  nchc_openwebui_5015:
+    container_name: nchc_openwebui_5015
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5015:5015    
+    volumes:
+      - ./storage/openwebui_data_5015:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5015
+
+  nchc_openwebui_5016:
+    container_name: nchc_openwebui_5016
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5016:5016    
+    volumes:
+      - ./storage/openwebui_data_5016:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5016
+
+  nchc_openwebui_5017:
+    container_name: nchc_openwebui_5017
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5017:5017    
+    volumes:
+      - ./storage/openwebui_data_5017:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5017
+
+  nchc_openwebui_5018:
+    container_name: nchc_openwebui_5018
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5018:5018    
+    volumes:
+      - ./storage/openwebui_data_5018:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5018
+
+  nchc_openwebui_5019:
+    container_name: nchc_openwebui_5019
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5019:5019    
+    volumes:
+      - ./storage/openwebui_data_5019:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5019
+
+  nchc_openwebui_5020:
+    container_name: nchc_openwebui_5020
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5020:5020    
+    volumes:
+      - ./storage/openwebui_data_5020:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5020
+
+  nchc_openwebui_5021:
+    container_name: nchc_openwebui_5021
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5021:5021    
+    volumes:
+      - ./storage/openwebui_data_5021:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5021
+
+  nchc_openwebui_5022:
+    container_name: nchc_openwebui_5022
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5022:5022    
+    volumes:
+      - ./storage/openwebui_data_5022:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5022
+
+  nchc_openwebui_5023:
+    container_name: nchc_openwebui_5023
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5023:5023    
+    volumes:
+      - ./storage/openwebui_data_5023:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5023
+
+  nchc_openwebui_5024:
+    container_name: nchc_openwebui_5024
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5024:5024    
+    volumes:
+      - ./storage/openwebui_data_5024:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5024
+
+  nchc_openwebui_5025:
+    container_name: nchc_openwebui_5025
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5025:5025    
+    volumes:
+      - ./storage/openwebui_data_5025:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5025
+
+  nchc_openwebui_5026:
+    container_name: nchc_openwebui_5026
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5026:5026    
+    volumes:
+      - ./storage/openwebui_data_5026:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5026
+
+  nchc_openwebui_5027:
+    container_name: nchc_openwebui_5027
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5027:5027    
+    volumes:
+      - ./storage/openwebui_data_5027:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5027
+
+  nchc_openwebui_5028:
+    container_name: nchc_openwebui_5028
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5028:5028    
+    volumes:
+      - ./storage/openwebui_data_5028:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5028
+
+  nchc_openwebui_5029:
+    container_name: nchc_openwebui_5029
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5029:5029    
+    volumes:
+      - ./storage/openwebui_data_5029:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5029
+
+  nchc_openwebui_5030:
+    container_name: nchc_openwebui_5030
+    image: ghcr.io/open-webui/open-webui:main
+    #pull_policy: always
+    ports:
+      - 5030:5030    
+    volumes:
+      - ./storage/openwebui_data_5030:/app/backend/data
+    restart: unless-stopped
+    networks:
+      - nchc    
+    extra_hosts:
+      - host.docker.internal:host-gateway   
+    environment:
+      - /ollama/api=http://nchc_ollama:11434/api
+      - OPENAI_API_BASE_URLS=${OPENAI_API_BASE_URLS}
+      - OPENAI_API_KEYS=${OPENAI_API_KEYS}
+      - PORT=5030
+
