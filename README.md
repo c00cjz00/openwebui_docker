@@ -9,6 +9,19 @@
 ```
 git clone https://github.com/c00cjz00/openwebui_docker.git
 ```
+
+## 首頁製作
+- 提供web.txt
+```
+allen
+peter
+mary
+```
+- 網頁製作
+```
+php web.php > website/index_ds_ip.html
+```
+
 ## 安裝課程數量
 ```
 php docker.php > docker-compose.yml
